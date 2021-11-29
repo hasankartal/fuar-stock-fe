@@ -36,7 +36,7 @@ export function createArticle(data) {
 }
 
 export function fetchSaleList() {
- /* get('http://localhost:8011/sale?token=token').then(response => {
+ /* get('https://fuar-stock.herokuapp.com/sale?token=token').then(response => {
     //this.total = 3
     this.list = response.data.map(v => {
     v.id = v.id
@@ -48,7 +48,7 @@ export function fetchSaleList() {
     }, 1.5 * 1000)
   }) */
   return request({
-    url: 'http://localhost:8011/sale?token=token',
+    url: 'https://fuar-stock.herokuapp.com/sale?token=token',
     method: 'get'
   })
 
@@ -56,7 +56,7 @@ export function fetchSaleList() {
 
 export function fetchSaleSearchList(data) {
    return request({
-     url: 'http://localhost:8011/sale/search?token=token',
+     url: 'https://fuar-stock.herokuapp.com/sale/search?token=token',
      method: 'get',
      params: {
       moneyType: data.moneyType,
@@ -71,7 +71,7 @@ export function fetchSaleSearchList(data) {
  
 export function createSale(data) {
   return request({
-    url: 'http://localhost:8011/sale/add?token=token',
+    url: 'https://fuar-stock.herokuapp.com/sale/add?token=token',
     method: 'post',
     data
   })
@@ -79,7 +79,7 @@ export function createSale(data) {
 
 export function updateSale(data) {
   request({
-    url: 'http://localhost:8011/sale/update?token=token',
+    url: 'https://fuar-stock.herokuapp.com/sale/update?token=token',
     method: 'post',
     data
   })
@@ -88,7 +88,7 @@ export function updateSale(data) {
 export function deleteSale(data) {
 //  axios.delete('https://my-json-server.typicode.com/json/posts/' + id);
   request({
-    url: 'http://localhost:8011/sale/delete?token=token',
+    url: 'https://fuar-stock.herokuapp.com/sale/delete?token=token',
     method: 'delete',
     data
   })
@@ -96,7 +96,7 @@ export function deleteSale(data) {
 
 export function exportSaleExcel(data) {
   return request({
-      url: 'http://localhost:8011/sale/exportExcel?token=token',
+      url: 'https://fuar-stock.herokuapp.com/sale/exportExcel?token=token',
       method: 'post',
       responseType: 'blob',
       data
@@ -105,7 +105,7 @@ export function exportSaleExcel(data) {
 
 export function exportSaleExcelByParameters(data) {
   return request({
-      url: 'http://localhost:8011/sale/exportExcelByParameters?token=token',
+      url: 'https://fuar-stock.herokuapp.com/sale/exportExcelByParameters?token=token',
       method: 'get',
       responseType: 'blob',
       params: {
@@ -118,7 +118,7 @@ export function exportSaleExcelByParameters(data) {
 }
 
 export function fetchCustomerList() {
-  /* get('http://localhost:8011/sale?token=token').then(response => {
+  /* get('https://fuar-stock.herokuapp.com/sale?token=token').then(response => {
      //this.total = 3
      this.list = response.data.map(v => {
      v.id = v.id
@@ -130,14 +130,14 @@ export function fetchCustomerList() {
      }, 1.5 * 1000)
    }) */
    return request({
-     url: 'http://localhost:8011/customer?token=token',
+     url: 'https://fuar-stock.herokuapp.com/customer?token=token',
      method: 'get'
    })
  }
  
  export function fetchCustomerSearchList(data) {
     return request({
-      url: 'http://localhost:8011/customer/search?token=token',
+      url: 'https://fuar-stock.herokuapp.com/customer/search?token=token',
       method: 'get',
       params: {
        name: data.surname,
@@ -153,7 +153,7 @@ export function fetchCustomerList() {
  
  export function createCustomer(data) {
    return request({
-     url: 'http://localhost:8011/customer/add?token=token',
+     url: 'https://fuar-stock.herokuapp.com/customer/add?token=token',
      method: 'post',
      data
    })
@@ -161,7 +161,7 @@ export function fetchCustomerList() {
  
  export function updateCustomer(data) {
    request({
-     url: 'http://localhost:8011/customer/update?token=token',
+     url: 'https://fuar-stock.herokuapp.com/customer/update?token=token',
      method: 'post',
      data
    })
@@ -170,7 +170,7 @@ export function fetchCustomerList() {
  export function deleteCustomer(data) {
  //  axios.delete('https://my-json-server.typicode.com/json/posts/' + id);
    request({
-     url: 'http://localhost:8011/customer/delete?token=token',
+     url: 'https://fuar-stock.herokuapp.com/customer/delete?token=token',
      method: 'delete',
      data
    })
@@ -178,7 +178,7 @@ export function fetchCustomerList() {
  
  export function exportCustomerExcel(data) {
    return request({
-       url: 'http://localhost:8011/customer/exportExcel?token=token',
+       url: 'https://fuar-stock.herokuapp.com/customer/exportExcel?token=token',
        method: 'post',
        responseType: 'blob',
        data
@@ -187,7 +187,7 @@ export function fetchCustomerList() {
  
  export function exportCustomerExcelByParameters(data) {
    return request({
-       url: 'http://localhost:8011/customer/exportExcelByParameters?token=token',
+       url: 'https://fuar-stock.herokuapp.com/customer/exportExcelByParameters?token=token',
        method: 'get',
        responseType: 'blob',
        params: {
