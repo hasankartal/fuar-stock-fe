@@ -1,1 +1,1 @@
-web: node vue.config.js
+web: npm run dev
